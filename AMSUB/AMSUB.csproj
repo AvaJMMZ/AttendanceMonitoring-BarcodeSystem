@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3649A304-F73D-47E5-B200-4B38989097A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AMSUB</RootNamespace>
+    <AssemblyName>AMSUB</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1620.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1620.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AMSUB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AMSUB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="AMSUBDataSet.cs">
+      <DependentUpon>AMSUBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AMSUBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AMSUBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AMSUBDataSet_tblAttendance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AMSUBDataSet_tblAttendance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AMSUBDataSet_tblEmp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AMSUBDataSet_tblEmp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AMSUBDataSet_tblEmployeeList.cs">
+      <DependentUpon>AMSUBDataSet_tblEmployeeList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AMSUBDataSet_tblEmployeeList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AMSUBDataSet_tblEmployeeList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeID.Designer.cs">
+      <DependentUpon>EmployeeID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditEmp.Designer.cs">
+      <DependentUpon>frmEditEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimeInTimeOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimeInTimeOut.Designer.cs">
+      <DependentUpon>frmTimeInTimeOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AddEmployee.Designer.cs">
+      <DependentUpon>frm_AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_EAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_EAttendance.Designer.cs">
+      <DependentUpon>frm_EAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GenerateID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GenerateID.Designer.cs">
+      <DependentUpon>frm_GenerateID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_mainpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_mainpage.Designer.cs">
+      <DependentUpon>frm_mainpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ViewAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ViewAll.Designer.cs">
+      <DependentUpon>frm_ViewAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="DTRReport.rdlc" />
+    <EmbeddedResource Include="EmployeeID.resx">
+      <DependentUpon>EmployeeID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditEmp.resx">
+      <DependentUpon>frmEditEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimeInTimeOut.resx">
+      <DependentUpon>frmTimeInTimeOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AddEmployee.resx">
+      <DependentUpon>frm_AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_EAttendance.resx">
+      <DependentUpon>frm_EAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GenerateID.resx">
+      <DependentUpon>frm_GenerateID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_mainpage.resx">
+      <DependentUpon>frm_mainpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ViewAll.resx">
+      <DependentUpon>frm_ViewAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="AMSUB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AMSUB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AMSUB.dbml.layout">
+      <DependentUpon>AMSUB.dbml</DependentUpon>
+    </None>
+    <None Include="AMSUBDataSet.xsc">
+      <DependentUpon>AMSUBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AMSUBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AMSUBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AMSUBDataSet.xss">
+      <DependentUpon>AMSUBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AMSUBDataSet_tblAttendance.xsc">
+      <DependentUpon>AMSUBDataSet_tblAttendance.xsd</DependentUpon>
+    </None>
+    <None Include="AMSUBDataSet_tblAttendance.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AMSUBDataSet_tblAttendance.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AMSUBDataSet_tblAttendance.xss">
+      <DependentUpon>AMSUBDataSet_tblAttendance.xsd</DependentUpon>
+    </None>
+    <None Include="AMSUBDataSet_tblEmp.xsc">
+      <DependentUpon>AMSUBDataSet_tblEmp.xsd</DependentUpon>
+    </None>
+    <None Include="AMSUBDataSet_tblEmp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AMSUBDataSet_tblEmp.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AMSUBDataSet_tblEmp.xss">
+      <DependentUpon>AMSUBDataSet_tblEmp.xsd</DependentUpon>
+    </None>
+    <None Include="AMSUBDataSet_tblEmployeeList.xsc">
+      <DependentUpon>AMSUBDataSet_tblEmployeeList.xsd</DependentUpon>
+    </None>
+    <None Include="AMSUBDataSet_tblEmployeeList.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AMSUBDataSet_tblEmployeeList.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AMSUBDataSet_tblEmployeeList.xss">
+      <DependentUpon>AMSUBDataSet_tblEmployeeList.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\EmployeeImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AMSUB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AMSUB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>AMSUB.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

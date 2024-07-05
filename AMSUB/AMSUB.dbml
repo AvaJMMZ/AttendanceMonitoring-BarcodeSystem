@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="AMSUB" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JOANNAH\SQLEXPRESS;Initial Catalog=AMSUB;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="AMSUB.Properties.Settings" SettingsPropertyName="AMSUBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_employee" Member="tbl_employees">
+    <Type Name="tbl_employee">
+      <Column Name="employee_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="firstname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="middlename" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="surname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="birthdate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jobposition" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="barcode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="image" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblAttendance" Member="tblAttendances">
+    <Type Name="tblAttendance">
+      <Column Name="empAttID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="empID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="amtimeIn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="amtimeOut" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pmtimeIn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pmtimeOut" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
